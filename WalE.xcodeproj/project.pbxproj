@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B5E67E929CCB64D00FF724E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5E67E829CCB64D00FF724E /* Constant.swift */; };
+		9B5E67EB29CCB84200FF724E /* AstronomyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5E67EA29CCB84100FF724E /* AstronomyDataModel.swift */; };
+		9B5E67ED29CCB8C100FF724E /* AstronomyPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5E67EC29CCB8C100FF724E /* AstronomyPicture.swift */; };
 		9BFA9F9F29CCB43E0008EA69 /* WalEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA9F9E29CCB43E0008EA69 /* WalEApp.swift */; };
 		9BFA9FA129CCB43E0008EA69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA9FA029CCB43E0008EA69 /* ContentView.swift */; };
 		9BFA9FA329CCB4410008EA69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFA9FA229CCB4410008EA69 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B5E67E829CCB64D00FF724E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		9B5E67EA29CCB84100FF724E /* AstronomyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyDataModel.swift; sourceTree = "<group>"; };
+		9B5E67EC29CCB8C100FF724E /* AstronomyPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicture.swift; sourceTree = "<group>"; };
 		9BFA9F9B29CCB43E0008EA69 /* WalE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFA9F9E29CCB43E0008EA69 /* WalEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalEApp.swift; sourceTree = "<group>"; };
 		9BFA9FA029CCB43E0008EA69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +78,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B5E67E729CCB63A00FF724E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9B5E67E829CCB64D00FF724E /* Constant.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		9B5E67EE29CCB95D00FF724E /* AstronomyModel */ = {
+			isa = PBXGroup;
+			children = (
+				9B5E67EA29CCB84100FF724E /* AstronomyDataModel.swift */,
+				9B5E67EC29CCB8C100FF724E /* AstronomyPicture.swift */,
+			);
+			path = AstronomyModel;
+			sourceTree = "<group>";
+		};
 		9BFA9F9229CCB43E0008EA69 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +118,8 @@
 		9BFA9F9D29CCB43E0008EA69 /* WalE */ = {
 			isa = PBXGroup;
 			children = (
+				9B5E67EE29CCB95D00FF724E /* AstronomyModel */,
+				9B5E67E729CCB63A00FF724E /* Constants */,
 				9BFA9F9E29CCB43E0008EA69 /* WalEApp.swift */,
 				9BFA9FA029CCB43E0008EA69 /* ContentView.swift */,
 				9BFA9FA229CCB4410008EA69 /* Assets.xcassets */,
@@ -260,7 +285,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BFA9FA129CCB43E0008EA69 /* ContentView.swift in Sources */,
+				9B5E67ED29CCB8C100FF724E /* AstronomyPicture.swift in Sources */,
 				9BFA9F9F29CCB43E0008EA69 /* WalEApp.swift in Sources */,
+				9B5E67EB29CCB84200FF724E /* AstronomyDataModel.swift in Sources */,
+				9B5E67E929CCB64D00FF724E /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,10 +457,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nasa.wale.WalE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -467,10 +495,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nasa.wale.WalE;
 				PRODUCT_NAME = "$(TARGET_NAME)";

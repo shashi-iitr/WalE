@@ -9,13 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ScrollView (.vertical, showsIndicators: false) {
+            VStack (alignment: .leading, spacing: 0) {
+                HStack {
+                    Text("Astronomy Picture of the Day")
+                        .font(.title2)
+                    
+                    Spacer()
+                }
+                
+                
+                
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundColor(.accentColor)
+                Text("Hello, world!")
+            }
+            .background(Color.orange)
+            .padding(.horizontal)
         }
-        .padding()
     }
 }
 
