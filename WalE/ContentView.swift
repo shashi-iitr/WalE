@@ -8,25 +8,59 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject private var viewModel = AstronomyDataModel()
+    
     var body: some View {
-        ScrollView (.vertical, showsIndicators: false) {
-            VStack (alignment: .leading, spacing: 0) {
-                HStack {
-                    Text("Astronomy Picture of the Day")
-                        .font(.title2)
+        NavigationView {
+            ScrollView {
+                VStack (alignment: .leading, spacing: 16) {
+                    if let url = URL.init(string: viewModel.astronomyPicture.url) {
+                        AsyncImage(
+                            url: url,
+                            content: { image in
+                                GeometryReader { geometry in
+                                    image
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .ignoresSafeArea()
+                                    //                                    .edgesIgnoringSafeArea(.all)
+                                        .frame(maxWidth: geometry.size.width,
+                                               maxHeight: geometry.size.height)
+                                }
+                            },
+                            placeholder: {
+                                HStack {
+                                    Spacer()
+                                    ProgressView()
+                                    Spacer()
+                                }
+                            }
+                        )
+                        .frame(height: 400)
+                    }
+                    
+                    Text(viewModel.astronomyPicture.title)
+                        .font(.title3)
+                    
+                    Text(viewModel.astronomyPicture.explanation)
+                        .font(.body)
+                        .lineSpacing(4)
+                        .foregroundColor(Color.gray)
                     
                     Spacer()
                 }
-                
-                
-                
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
-                Text("Hello, world!")
+                .padding(.horizontal)
+                .onAppear {
+                    viewModel.loadPictureOfDay { astronomyPicture in
+                        if let astronomyPicture = astronomyPicture {
+                            viewModel.astronomyPicture = astronomyPicture
+                        }
+                    }
+                }
             }
-            .background(Color.orange)
-            .padding(.horizontal)
+            .navigationTitle("Picture of the day")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

@@ -16,7 +16,7 @@ struct AstronomyPicture: Identifiable, Codable {
     var copyright = ""
     var hdurl = ""
     
-    var id = ""
+    var id = UUID()
     
     init() {
         
