@@ -9,3 +9,13 @@ import Foundation
 
 let api_key = "kvMnpIDoSov4a6zBgqPfJ4PspIDMjjOxrQeNggzk"
 let apod_url_string = "https://api.nasa.gov/planetary/apod?api_key=kvMnpIDoSov4a6zBgqPfJ4PspIDMjjOxrQeNggzk"
+
+let lastFetchedDate = "lastFetchedDate"
+let lastFetchedData = "lastFetchedData"
+
+func pictureDateFormatter() -> DateFormatter {
+    let dateFormatterGet = DateFormatter()
+    dateFormatterGet.dateFormat = "yyyy-MM-dd"
+    
+    return dateFormatterGet
+}

@@ -10,6 +10,7 @@
 		9B5E67E929CCB64D00FF724E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5E67E829CCB64D00FF724E /* Constant.swift */; };
 		9B5E67EB29CCB84200FF724E /* AstronomyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5E67EA29CCB84100FF724E /* AstronomyDataModel.swift */; };
 		9B5E67ED29CCB8C100FF724E /* AstronomyPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5E67EC29CCB8C100FF724E /* AstronomyPicture.swift */; };
+		9BC8EC8029D089590027C0F1 /* PictureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC8EC7F29D089590027C0F1 /* PictureManager.swift */; };
 		9BFA9F9F29CCB43E0008EA69 /* WalEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA9F9E29CCB43E0008EA69 /* WalEApp.swift */; };
 		9BFA9FA129CCB43E0008EA69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFA9FA029CCB43E0008EA69 /* ContentView.swift */; };
 		9BFA9FA329CCB4410008EA69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFA9FA229CCB4410008EA69 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		9B5E67E829CCB64D00FF724E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		9B5E67EA29CCB84100FF724E /* AstronomyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyDataModel.swift; sourceTree = "<group>"; };
 		9B5E67EC29CCB8C100FF724E /* AstronomyPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyPicture.swift; sourceTree = "<group>"; };
+		9BC8EC7F29D089590027C0F1 /* PictureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureManager.swift; sourceTree = "<group>"; };
 		9BFA9F9B29CCB43E0008EA69 /* WalE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFA9F9E29CCB43E0008EA69 /* WalEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalEApp.swift; sourceTree = "<group>"; };
 		9BFA9FA029CCB43E0008EA69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,13 +88,21 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		9B5E67EE29CCB95D00FF724E /* AstronomyModel */ = {
+		9B5E67EE29CCB95D00FF724E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				9B5E67EA29CCB84100FF724E /* AstronomyDataModel.swift */,
 				9B5E67EC29CCB8C100FF724E /* AstronomyPicture.swift */,
 			);
-			path = AstronomyModel;
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9BC8EC7E29D0892E0027C0F1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9BC8EC7F29D089590027C0F1 /* PictureManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		9BFA9F9229CCB43E0008EA69 = {
@@ -118,7 +128,8 @@
 		9BFA9F9D29CCB43E0008EA69 /* WalE */ = {
 			isa = PBXGroup;
 			children = (
-				9B5E67EE29CCB95D00FF724E /* AstronomyModel */,
+				9BC8EC7E29D0892E0027C0F1 /* Services */,
+				9B5E67EE29CCB95D00FF724E /* ViewModel */,
 				9B5E67E729CCB63A00FF724E /* Constants */,
 				9BFA9F9E29CCB43E0008EA69 /* WalEApp.swift */,
 				9BFA9FA029CCB43E0008EA69 /* ContentView.swift */,
@@ -286,6 +297,7 @@
 			files = (
 				9BFA9FA129CCB43E0008EA69 /* ContentView.swift in Sources */,
 				9B5E67ED29CCB8C100FF724E /* AstronomyPicture.swift in Sources */,
+				9BC8EC8029D089590027C0F1 /* PictureManager.swift in Sources */,
 				9BFA9F9F29CCB43E0008EA69 /* WalEApp.swift in Sources */,
 				9B5E67EB29CCB84200FF724E /* AstronomyDataModel.swift in Sources */,
 				9B5E67E929CCB64D00FF724E /* Constant.swift in Sources */,
